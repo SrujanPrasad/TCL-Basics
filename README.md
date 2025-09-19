@@ -57,10 +57,10 @@ set q 1;
 puts "[expr {$p && $q}]";   # logical and
 puts "[expr {$p || $q}]";   # logical or
 puts "[expr {!$p}]";        # logical not
+```
 
-# -----------------------------
 # Bitwise Operators
-# -----------------------------
+```tcl
 set w 15;
 set v 10;
 puts "[expr {$w & $v}]";    # bitwise and
