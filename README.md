@@ -150,6 +150,19 @@ if {$choice == "l"} {
 } elseif {$choice == "k"} {
   puts "Weight in kg is : [expr {$weight / 2.2}] kg";
 } else {
-  puts "Enter valid choice";
+  puts "Enter a valid choice";
 }
+```
+## Functions 
+```tcl
+#functions - proc function_name {} 
+proc first_proc {} {
+  puts "This is the first proc";
+}
+first_proc;      #function call
+
+proc sum {t s} {
+  return [expr $t+$s];
+}
+puts "The sum is :[sum 10 20]"; #function call
 ```
