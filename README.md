@@ -165,4 +165,10 @@ proc sum {t s} {
   return [expr $t+$s];
 }
 puts "The sum is :[sum 10 20]"; #function call
+
+proc age_calc {a2} {
+  return [expr 2025-$a2];
+}
+puts "Your age is : [age_calc 2004] years ";
+
 ```
