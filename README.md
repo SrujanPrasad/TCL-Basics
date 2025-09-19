@@ -7,10 +7,11 @@ puts "Hello, World!";  # my first program
 puts "Hello TCL";
 puts "Welcome to new programming language";
 # when we are using multiple puts statements then it is necessary to put a semicolon
+```
 
-# -----------------------------
-# Variables and Strings
-# -----------------------------
+## Variables and Strings
+
+```tcl
 set x 5;                     # declare variable
 puts "$x";                   # print variable
 
@@ -31,10 +32,11 @@ set str "Today is a good day";
 puts "$str";                 # prints str value
 puts {Today is a good day};  # prints text as it is
 puts {$str};                 # prints text as it is (no substitution)
+```
 
-# -----------------------------
-# Arithmetic Operations
-# -----------------------------
+## Arithmetic Operations
+
+```tcl
 set a 10;
 set b 5;
 set c [expr {$a + $b}];   # addition
@@ -44,10 +46,11 @@ puts "[expr {$a - $b}]";  # subtraction
 puts "[expr {$a * $b}]";  # multiplication
 puts "[expr {$a / $b}]";  # division
 puts "[expr {$a % $b}]";  # modulus
+```
 
-# -----------------------------
-# Logical Operators
-# -----------------------------
+## Logical Operators
+
+```tcl
 set p 0;
 set q 1;
 puts "[expr {$p && $q}]";   # logical and
@@ -62,48 +65,47 @@ set v 10;
 puts "[expr {$w & $v}]";    # bitwise and
 puts "[expr {$w | $v}]";    # bitwise or
 puts "[expr {$w ^ $v}]";    # bitwise xor
+```
 
-# -----------------------------
-# Nested set example
-# -----------------------------
+## Nested set example
+```tcl
 set a "[set x {VLSI Academy}]"
 puts "$x and $a";           # both x and a will be "VLSI Academy"
 
-# -----------------------------
-# If-Else
-# -----------------------------
+```
+## If-Else
+```tcl
 set c 18;
 if {$c == 18} {
   puts "Your age is $c, you can vote"
 } else {
   puts "Sorry"
 }
-
-# -----------------------------
-# User Input
-# -----------------------------
+```
+## User Input
+```tcl
 set name [gets stdin];    # get input from user
 puts "Hi $name";
+```
 
-# -----------------------------
-# While Loop
-# -----------------------------
+## While Loop
+```tcl
 set n 0;
 while {$n < 10} {
   puts "n is : $n";
   set n [expr {$n + 1}];
 }
+```
 
-# -----------------------------
-# For Loop
-# -----------------------------
+## For Loop
+```tcl
 for {set i 0} {$i < 5} {incr i} {
-  puts "i is : $i";
+  puts "i is: $i";
 }
+```
 
-# -----------------------------
-# Arrays
-# -----------------------------
+## Arrays
+```tcl
 set employee(0) Name;
 set employee(1) id;
 set employee(2) salary;
@@ -121,3 +123,4 @@ for {set index 0} {$index < [array size employee]} {incr index} {
 # foreach index [array names employee] {
 #   puts "employee($index) : $employee($index)";
 # }
+```
