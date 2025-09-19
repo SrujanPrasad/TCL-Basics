@@ -1,5 +1,6 @@
-## Basics of TCL Scripting
+# Basics of TCL Scripting
 
+## Printing functions
 ```tcl
 puts "Hi TCL";   # this is also correct
 puts "Hello, World!";  # my first program
@@ -71,7 +72,6 @@ puts "[expr {$w ^ $v}]";    # bitwise xor
 ```tcl
 set a "[set x {VLSI Academy}]"
 puts "$x and $a";           # both x and a will be "VLSI Academy"
-
 ```
 ## If-Else
 ```tcl
@@ -123,4 +123,33 @@ for {set index 0} {$index < [array size employee]} {incr index} {
 # foreach index [array names employee] {
 #   puts "employee($index) : $employee($index)";
 # }
+```
+## String functions
+```tcl
+set x a<b;
+puts "$x"
+
+puts [string compare "Hello" "World"];   # compare strings
+puts [string index "Hello World" 6];     # character at index
+puts [string length "Helloworld"];       # length of string
+puts [string toupper "helloworld"];      # uppercase version 
+puts [string tolower "HELLOWORLD"];      # lowercase version
+
+set s1 "Hello World today";
+append s1 " is friday";                  # append to string
+puts $s1;
+```
+## Weight converter program 
+```tcl
+set weight 72;
+set choice [gets stdin];
+puts "l(lbs) or k(kgs) : $choice";
+
+if {$choice == "l"} {
+  puts "Weight in pounds is : [expr {$weight * 2.2}] lbs";
+} elseif {$choice == "k"} {
+  puts "Weight in kg is : [expr {$weight / 2.2}] kg";
+} else {
+  puts "Enter valid choice";
+}
 ```
